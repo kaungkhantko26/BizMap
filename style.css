@@ -515,3 +515,60 @@ footer.copyright {
     height: 50vh;
   }
 }
+/* --- GLOBAL RESPONSIVE TYPOGRAPHY --- */
+body {
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+/* Ensure containers adapt to ultra-wide screens */
+.main-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Improve location-info scaling on small and large screens */
+.location-info {
+  width: min(95%, 520px);
+  max-height: 70vh;
+  font-size: clamp(14px, 1.1vw, 16px);
+}
+
+/* Improve responsiveness for ultrawide + foldable displays */
+@media (min-width: 1800px) {
+  .main-container {
+    padding: 20px 60px;
+  }
+  .location-info {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .location-button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .location-info {
+    padding: 20px;
+    font-size: 13px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  #search-input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Enable scroll for map/buttons on very small or foldable screens */
+.map-container,
+.buttons-container {
+  max-height: 100%;
+  overflow: auto;
+}
+
