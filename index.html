@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YangonSalesDepartment</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="intro-overlay">
+    <div class="logo-blur-container" role="banner" aria-label="BizMap logo and loading screen">
+      <i class="fas fa-map-location-dot logo-icon" aria-hidden="true"></i>
+      <h1>BizMap</h1>
+    </div>
+  </div>
+
+  <header class="header" role="banner">
+    <div class="logo">
+      <i class="fas fa-map-location-dot" aria-hidden="true"></i>
+      <h1>BizMap</h1>
+    </div>
+  </header>
+
+  <main class="main-container" role="main">
+    <div class="map-and-buttons">
+      <nav class="buttons-container" aria-label="Van Routes Navigation">
+        <button class="location-button" data-location="van1"><i class="fas fa-truck"></i> Van 1</button>
+        <button class="location-button" data-location="van2"><i class="fas fa-truck"></i> Van 2</button>
+        <button class="location-button" data-location="van3"><i class="fas fa-truck"></i> Van 3</button>
+        <button class="location-button" data-location="van4"><i class="fas fa-truck"></i> Van 4</button>
+        <button class="location-button" data-location="van5"><i class="fas fa-truck"></i> Van 5</button>
+      </nav>
+
+      <section class="map-container" aria-label="Map displaying Yangon and routes">
+        <div id="map" tabindex="0" role="region" aria-live="polite" aria-atomic="true"></div>
+      </section>
+    </div>
+
+    <section id="location-info-van1" class="location-info" aria-hidden="true">
+      <button class="close-btn" aria-label="Close Van 1 Info Panel">&times;</button>
+      <h3><i class="fas fa-truck"></i> Van 1 Route</h3>
+      <div class="location-line" data-place="South Okkalapa" tabindex="0">South Okkalapa</div>
+      <div class="location-line" data-place="Dagon Seikkan" tabindex="0">Dagon Seikkan</div>
+      <div class="location-line" data-place="North Dagon" tabindex="0">North Dagon</div>
+      <div class="location-line" data-place="East Dagon" tabindex="0">East Dagon</div>
+      <div class="location-line" data-place="Kamaryut" tabindex="0">Kamaryut</div>
+      <div class="location-line" data-place="Hlaing" tabindex="0">Hlaing</div>
+      <div class="location-line" data-place="Bago" tabindex="0">Bago</div>
+    </section>
+
+    <section id="location-info-van2" class="location-info" aria-hidden="true">
+      <button class="close-btn" aria-label="Close Van 2 Info Panel">&times;</button>
+      <h3><i class="fas fa-truck"></i> Van 2 Route</h3>
+      <div class="location-line" data-place="Hlaingthaya" tabindex="0">Hlaingthaya</div>
+      <div class="location-line" data-place="Maubin" tabindex="0">Maubin</div>
+      <div class="location-line" data-place="Kawhmu" tabindex="0">Kawhmu</div>
+      <div class="location-line" data-place="Kyaiklat" tabindex="0">Kyaiklat</div>
+      <div class="location-line" data-place="Bogale" tabindex="0">Bogale</div>
+      <div class="location-line" data-place="Pyapon" tabindex="0">Pyapon</div>
+      <div class="location-line" data-place="Mayangone" tabindex="0">Mayangone</div>
+    </section>
+
+    <section id="location-info-van3" class="location-info" aria-hidden="true">
+      <button class="close-btn" aria-label="Close Van 3 Info Panel">&times;</button>
+      <h3><i class="fas fa-truck"></i> Van 3 Route</h3>
+      <div class="location-line" data-place="North Okkalapa" tabindex="0">North Okkalapa</div>
+      <div class="location-line" data-place="Letpadan" tabindex="0">Letpadan</div>
+      <div class="location-line" data-place="Monyo" tabindex="0">Monyo</div>
+      <div class="location-line" data-place="Mingaladon" tabindex="0">Mingaladon</div>
+      <div class="location-line" data-place="Shwepyithar" tabindex="0">Shwepyithar</div>
+      <div class="location-line" data-place="Kyauktan" tabindex="0">Kyauktan</div>
+    </section>
+
+    <section id="location-info-van4" class="location-info" aria-hidden="true">
+      <button class="close-btn" aria-label="Close Van 4 Info Panel">&times;</button>
+      <h3><i class="fas fa-truck"></i> Van 4 Route</h3>
+      <div class="location-line" data-place="Kawmhu" tabindex="0">Kawmhu</div>
+      <div class="location-line" data-place="Dedaye" tabindex="0">Dedaye</div>
+      <div class="location-line" data-place="Kwanchaungon" tabindex="0">Kwanchaungon</div>
+      <div class="location-line" data-place="Hlaingthaya" tabindex="0">Hlaingthaya</div>
+      <div class="location-line" data-place="Dala" tabindex="0">Dala</div>
+    </section>
+
+    <section id="location-info-van5" class="location-info" aria-hidden="true">
+      <button class="close-btn" aria-label="Close Van 5 Info Panel">&times;</button>
+      <h3><i class="fas fa-truck"></i> Van 5 Route</h3>
+      <div class="location-line" data-place="Thanlyin" tabindex="0">Thanlyin</div>
+      <div class="location-line" data-place="Hmawbi" tabindex="0">Hmawbi</div>
+      <div class="location-line" data-place="Taikkyi" tabindex="0">Taikkyi</div>
+      <div class="location-line" data-place="Twantay" tabindex="0">Twantay</div>
+      <div class="location-line" data-place="Danubyu" tabindex="0">Danubyu</div>
+      <div class="location-line" data-place="Hlegu" tabindex="0">Hlegu</div>
+      <div class="location-line" data-place="Shwepyitha" tabindex="0">Shwepyitha</div>
+      <div class="location-line" data-place="Kyauktan" tabindex="0">Kyauktan</div>
+      <div class="location-line" data-place="Nyaungdon" tabindex="0">Nyaungdon</div>
+    </section>
+  </main>
+
+  <footer class="copyright" role="contentinfo">
+    &copy; 2025 BizMap - Designed by KaungKhantKo
+  </footer>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFb2kM068CF2McdkrdjHJivAK9h60Zx6Y&libraries=places&callback=initMap"
+    async defer></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
