@@ -87,10 +87,10 @@ body {
 
 /* CENTERED SEARCH BOX BELOW HEADER */
 #search-input {
-  width: 100%;
+  width: 90%;
   max-width: 500px;
-  padding: 12px 16px;
-  font-size: 16px;
+  padding: 0.75em 1em;
+  font-size: clamp(14px, 4vw, 16px);
   border-radius: 12px;
   border: none;
   background: var(--glass-color);
@@ -104,6 +104,16 @@ body {
   font-family: var(--font-family);
   user-select: text;
 }
+
+/* Optional: mobile fine-tuning */
+@media (max-width: 480px) {
+  #search-input {
+    padding: 10px 14px;
+    font-size: 14px;
+    width: 95%;
+  }
+}
+
 
 #search-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -571,4 +581,33 @@ body {
   max-height: 100%;
   overflow: auto;
 }
+#search-input {
+  flex: 1;
+  max-width: 400px;
+  min-width: 160px;
+  padding: 10px 14px;
+  font-size: clamp(14px, 2vw, 16px);
+  border-radius: 10px;
+  border: none;
+  font-family: var(--font-family);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+  background: var(--glass-color);
+  color: var(--light-color);
+  backdrop-filter: var(--glass-blur);
+  outline: none;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
 
+/* Inside .header to allow wrapping on small screens */
+.header {
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media (max-width: 600px) {
+  #search-input {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+}

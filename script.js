@@ -241,27 +241,11 @@ function updateUserLocationOnLoad() {
 }
 
 function setupAutocomplete() {
-  const input = document.createElement('input');
-  input.id = 'search-input';
-  input.type = 'text';
-  input.placeholder = 'Search township or address...';
-  input.setAttribute('aria-label', 'Search township or address');
-  input.style.cssText = `
-    position: absolute;
-    top: 20px;
-    left: 320px;
-    width: 280px;
-    max-width: 90vw;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-  `;
-
-  document.body.appendChild(input);
+  const input = document.getElementById('search-input'); // Use existing input in header
+  if (!input) {
+    console.error('Search input not found!');
+    return;
+  }
 
   const autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.bindTo('bounds', map);
@@ -284,6 +268,7 @@ function setupAutocomplete() {
     calculateAndDisplayRoute(origin, destination, place.name);
   });
 }
+
 
 function calculateAndDisplayRoute(origin, destination, destinationName) {
   if (!directionsService || !directionsRenderer) return;
